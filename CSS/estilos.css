@@ -1,7 +1,7 @@
 /* reset do css*/
 *{
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 2px;
   box-sizing: border-box;
 
 }
@@ -10,12 +10,13 @@ body {
     background-image: url('../img/wallpaper_loja.jpg');
     background-size:  200vh;
     font-family: Arial;    
+    font-family: 'Bowlby One SC', cursive;
     height: 200vh;
     font-size: 12;
   }
 
   /* se a tela tiver pelo menos 400px vai carregar estes estilos*/
-  @media (min-width: 400px) {
+  @media (min-width: 300px) {
     body {
       font-size: 14px;
     }
@@ -25,13 +26,11 @@ body {
     body {
       font-size: 18px;
     }
-
   }
 
   header{
     height: 100vh;
     display: flex;
-
     justify-content: center;
     align-items: center;
   }
@@ -52,39 +51,59 @@ body {
     justify-content: space-between;
   }
 
-  
   .menu a {
-    
-
   display: block;
   padding: 10px 20px;
   }
   
   a{
-    color: red;
+    color: black;
     text-decoration: none;
   }
   
   a:hover {
     text-decoration: underline;
   }
+
   .site-subtitle,
   .site-title {
-    color: red;
-    text-align: center;
-    
+    color: black;
+    text-align: center;   
   }
 
   .site-title {
     font-size: 4em;
-
+    font-family: 'Permanent Marker', cursive;
   }
   
   .site-subtitle {
     font-style: italic;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .grid {
+    display: grid;
+    gap: 3em;
+  }
+
+  @media (min-width:538px) {
+    .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  .figure {
+    text-align: center;
   }
 
   .img-portfolio{ 
-    height: 180px;
-    width: 180px;
+    height: 220px;
+    width: 220;
+  }
+
+  @media (min-width: 1200px) {
+    .img-portfolio {
+      height: 10em;
+      width: auto;
+    }
   }

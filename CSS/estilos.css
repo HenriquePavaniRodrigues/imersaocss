@@ -1,109 +1,180 @@
-/* reset do css*/
-*{
-  margin: 0px;
-  padding: 2px;
+/* soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
-    background-image: url('../img/wallpaper_loja.jpg');
-    background-size:  200vh;
-    font-family: Arial;    
-    font-family: 'Bowlby One SC', cursive;
-    height: 200vh;
-    font-size: 12;
-  }
+  background-image: url('../img/wallpaper_loja.jpg');
+  background-size: auto 100vh; 
+  font-family: 'Bowlby One SC', cursive;
+  height: 100vh;
+  font-size: 12px;
+}
 
-  /* se a tela tiver pelo menos 400px vai carregar estes estilos*/
-  @media (min-width: 300px) {
-    body {
-      font-size: 14px;
-    }
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
   }
+}
 
-  @media (mid-width: 600px) {
-    body {
-      font-size: 18px;
-    }
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
   }
+}
 
-  header{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
   }
-  
-  .menu {
-    background-color: white; 
-    position: fixed;
-    width: 100vw;
-    top: 0;
-  }
-  
-  .menu li{
-    list-style: none;  
-  }
-  
-  .menu ul{
-    display: flex;
-    justify-content: space-between;
-  }
+}
 
-  .menu a {
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+ list-style: none; 
+}
+
+.menu a {
   display: block;
   padding: 10px 20px;
-  }
-  
-  a{
-    color: black;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+  transition: background-color 1s, color 1s;
+}
 
-  .site-subtitle,
-  .site-title {
-    color: black;
-    text-align: center;   
-  }
+.menu a:active,
+.menu a:hover {
+  background-color: teal;
+  color: white;
+}
 
-  .site-title {
-    font-size: 4em;
-    font-family: 'Permanent Marker', cursive;
-  }
-  
-  .site-subtitle {
-    font-style: italic;
-    font-family: 'Press Start 2P', cursive;
-  }
+a {
+  color: teal;
+  text-decoration: none;
+}
 
-  .grid {
-    display: grid;
-    gap: 3em;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  @media (min-width:538px) {
-    .grid {
-      grid-template-columns: 240px 240px;
-    }
-  }
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: 1s ease 2s animacaoTitulo forwards;
+}
 
-  .figure {
-    text-align: center;
+@keyframes animacaoTitulo {
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
   }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
 
-  .img-portfolio{ 
-    height: 220px;
-    width: 220;
-  }
+.site-subtitle, 
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
 
-  @media (min-width: 1200px) {
-    .img-portfolio {
-      height: 10em;
-      width: auto;
-    }
+.site-title {
+  font-size: 4em;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.site-subtitle {
+ font-style: italic;
+ font-family: 'Press Start 2P', cursive;
+ line-height: 1.8em;
+}
+
+.contato,
+.camisas {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+.contato h2,
+.camisas h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.camisas .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .camisas .grid {
+    grid-template-columns: 240px 240px;
   }
+}
+
+@media (min-width: 880px) {
+  .camisas .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.camisas figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.2) rotate(-2deg);
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover  {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+}

@@ -1,56 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henrique Pavani</title>
-    <link rel="stylesheet" href="./CSS/estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Permanent+Marker&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleatória Store</title>
+  <link rel="stylesheet" href="./CSS/estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Permanent+Marker&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/6f713732c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav class="menu">
-          <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Portifolio</a></li>
-            <li><a href="#">teste</a></li>
-          <ul>
-        </nav>
+  <header>
+		<nav class="menu">
+			<ul>
+				<li><a href="#sobre">Sobre</a></li>
+				<li><a href="#portfolio">Projetos</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+		</nav>
+		<div class="titulo">
+			<h1 class="site-title">ALEATÓRIA STORE</h1>
+            <h2 class="site-subtitle">PRODUTOS</h2>
+		</div>
+  </header>
+  <section class="camisas" id="camisas">
+		<h2>camisas</h2>
 
-        <div>
-          <h1 class="site-title">ALEATÓRIA STORE</h1>
-          <h2 class="site-subtitle">CAMISAS</h2>
-        </div>
-     
-    </header>
+		<div class="grid">
+			<figure>
+                <figcaption>Camisa Metro Branca</figcaption>
+                <img class="img-portfolio" src="./img/camisa_metro_branca.jpeg" alt="Camisa Metro Branca">         
+            </figure>   
+            <figure>
+                <figcaption>Camisa Metro Preta</figcaption>
+                <img class="img-portfolio" src="./img/camisa_metro_preta.jpeg" alt="Camisa Metro Preta">          
+            </figure>    
+            <figure>
+                <figcaption>Camisa Praia Preta</figcaption>
+                <img class="img-portfolio" src="./img/camisa_praia_preta.jpeg" alt="Camisa Praia Preta">          
+            </figure>    
+            <figure>
+                <figcaption>Camisa VIAGE</figcaption>
+                <img class="img-portfolio" src="./img/camisa_viage.jpeg" alt="Camisa VIAGE">
+            </figure>
+		</div>
+		
+	</section>
+	<section class="contato" id="contato">
+		<h2>Contato</h2>
+	
+		<div class="grid icons">
+			<a target="_blank" href="https://github.com/R1ckGamer">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a target="_blanck" href="https://github.com/R1ckGamer">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a target="_blank" href="https://github.com/R1ckGamer">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a target="_blanck" href="https://github.com/R1ckGamer">
+				<i class="fab fa-youtube"></i>
+			</a>
 
-    <section>
-      <div class="grid">
-        <figure>
-
-          <figcaption>Camisa Metro Branca</figcaption>
-          <img class="img-portfolio" src="./img/camisa_metro_branca.jpeg" alt="Camisa Metro Branca">         
-        </figure>
-  
-        <figure>
-          <figcaption>Camisa Metro Preta</figcaption>
-          <img class="img-portfolio" src="./img/camisa_metro_preta.jpeg" alt="Camisa Metro Preta">          
-        </figure>
-  
-        <figure>
-          <figcaption>Camisa Praia Preta</figcaption>
-          <img class="img-portfolio" src="./img/camisa_praia_preta.jpeg" alt="Camisa Praia Preta">          
-        </figure>
-  
-        <figure>
-          <figcaption>Camisa VIAGE</figcaption>
-          <img class="img-portfolio" src="./img/camisa_viage.jpeg" alt="Camisa VIAGE">
-        </figure>
-  
-
-      </div>
-      
-
-    </section>
+		</div>
+	</section>
 </body>
 </html>

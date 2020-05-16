@@ -1,180 +1,108 @@
-/* soft reset do css */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  background-image: url('../img/wallpaper_loja.jpg');
-  background-size: auto 100vh; 
-  font-family: 'Bowlby One SC', cursive;
-  height: 100vh;
-  font-size: 12px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aleatória Store</title>
+	<link rel="stylesheet" href="./CSS/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Permanent+Marker&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+	<script src="https://kit.fontawesome.com/6f713732c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  	<header>
+		<nav class="menu">
+			<ul>
+				<li><a href="#sobre">Sobre</a></li>
+				<li><a href="#portfolio">Projetos</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+		</nav>
+		<div class="titulo">
+			<h1 class="site-title">RAISA SUA DOIDA</h1>
+            <h2 class="site-subtitle">PRODUTOS</h2>
+		</div>
+	  </header>
+	  <section class="sobre">
+		  <h2>Sobre</h2>
+		  <figure class="avatar">
+			  <img src="https://pbs.twimg.com/profile_images/1157459113430999040/kweFo2_s_400x400.jpg" alt="Henrique">
+		  </figure>
 
-/* se a tela tiver pelo menos 400px vai carregar estes estilos */
-@media (min-width: 400px) {
-  body {
-    font-size: 14px;
-  }
-}
+		  <p>
+			  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consectetur illo similique omnis ea, molestiae voluptate sunt. Tempore sint, commodi quibusdam excepturi fugit nobis nostrum neque velit dolore minima laboriosam.
+			  Iure quasi suscipit accusamus, omnis distinctio facilis reiciendis inventore expedita assumenda minima sint quod illo nulla rerum aliquid culpa atque beatae provident veritatis nemo. Nisi dignissimos eum fuga eaque adipisci!
+		  </p>
 
-/* breakpoint */
-@media (min-width: 600px) {
-  body {
-    font-size: 18px;
-  }
-}
+		  <p>
+			  Itaque fugit architecto commodi possimus! Facere quisquam officiis praesentium rem dolor unde cumque quia fugit at iure placeat, quae iste suscipit labore consequuntur? Nesciunt odio ratione earum cumque ullam totam.
+			  Magnam, ab ex reprehenderit quasi nobis fugiat neque id cumque non necessitatibus rem corrupti asperiores laudantium minima nam maiores. Ratione repellat harum dolores? Reprehenderit tenetur laborum asperiores reiciendis veniamum. Har.
+		  </p>
 
-/* breakpoint */
-@media (min-width: 1200px) {
-  body {
-    font-size: 20px;
-  }
-}
+		  <p>
+			  Esse site foi criado durante a <a href="https://github.com/R1ckGamer">[Imersão CSS da Alura]</a>;)
+		  </p>
 
-header {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+	  </section>
 
-.menu {
-  background-color: white;
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  z-index: 1;
-}
+  <section class="camisas" id="camisas">
+		<h2>camisas</h2>
 
-.menu ul {
-  display: flex;
-  justify-content: space-around;
-}
+		<div class="grid">
 
-.menu li {
- list-style: none; 
-}
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<figcaption>Camisa Metro Branca</figcaption>
+						<img class="img-portfolio" src="./img/camisa_metro_branca.jpeg" alt="Camisa Metro Branca">         
+					</figure>  
+					<div class="card-back">
+						oi , eu sou a parte de trás :)
+					</div>
+				</div>
+			</div>
 
-.menu a {
-  display: block;
-  padding: 10px 20px;
-  transition: background-color 1s, color 1s;
-}
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<figcaption>Camisa Metro Preta</figcaption>
+						<img class="img-portfolio" src="./img/camisa_metro_preta.jpeg" alt="Camisa Metro Preta">          
+					</figure>
+					<div class="card-back">
+						oi , eu sou a parte de trás dnv :O
+					</div>
+				</div>
+			</div>
+                
+            <figure>
+                <figcaption>Camisa Praia Preta</figcaption>
+                <img class="img-portfolio" src="./img/camisa_praia_preta.jpeg" alt="Camisa Praia Preta">          
+            </figure>    
+            <figure>
+                <figcaption>Camisa VIAGE</figcaption>
+                <img class="img-portfolio" src="./img/camisa_viage.jpeg" alt="Camisa VIAGE">
+            </figure>
+		</div>
+		
+	</section>
+	<section class="contato" id="contato">
+		<h2>Contato</h2>
+	
+		<div class="grid icons">
+			<a target="_blank" href="https://github.com/R1ckGamer">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a target="_blanck" href="https://github.com/R1ckGamer">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a target="_blank" href="https://github.com/R1ckGamer">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a target="_blanck" href="https://github.com/R1ckGamer">
+				<i class="fab fa-youtube"></i>
+			</a>
 
-.menu a:active,
-.menu a:hover {
-  background-color: teal;
-  color: white;
-}
-
-a {
-  color: teal;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.titulo {
-  transform: scale(0.2) translateY(50vh);
-  opacity: 0;
-  animation: 1s ease 2s animacaoTitulo forwards;
-}
-
-@keyframes animacaoTitulo {
-  from {
-    transform: scale(0.2) translateY(50vh);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-}
-
-.site-subtitle, 
-.site-title {
-  color: whitesmoke;
-  text-align: center;
-}
-
-.site-title {
-  font-size: 4em;
-  font-family: 'Permanent Marker', cursive;
-}
-
-.site-subtitle {
- font-style: italic;
- font-family: 'Press Start 2P', cursive;
- line-height: 1.8em;
-}
-
-.contato,
-.camisas {
-  padding: 2em;
-  min-height: 100vh;
-}
-
-.contato h2,
-.camisas h2 {
-  font-family: 'Press Start 2P', cursive;
-  color: whitesmoke;
-  margin-bottom: 1.5em;
-  font-size: 2em;
-}
-
-.camisas .grid {
-  display: grid;
-  gap: 2em;
-}
-
-@media (min-width: 560px) {
-  .camisas .grid {
-    grid-template-columns: 240px 240px;
-  }
-}
-
-@media (min-width: 880px) {
-  .camisas .grid {
-    grid-template-columns: repeat(3, 260px);
-    align-content: center;
-    justify-content: center;
-    height: calc(100vh - 8em - 48px);
-  }
-}
-
-.camisas figure {
-  text-align: center;
-}
-
-.img-portfolio {
-  height: 180px;
-  width: 240px;
-  object-fit: cover;
-  object-position: left bottom;
-  transition: transform 500ms;
-}
-
-.img-portfolio:hover {
-  transform: scale(1.2) rotate(-2deg);
-}
-
-.contato .icons {
-  text-align: center;
-}
-
-.contato a {
-  color: whitesmoke;
-  font-size: 4em;
-  transition: text-shadow 1s;
-}
-
-.contato a:active,
-.contato a:hover  {
-  text-decoration: none;
-  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
-}
+		</div>
+	</section>
+</body>
+</html>
